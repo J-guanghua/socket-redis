@@ -1,0 +1,21 @@
+{
+    "name": "guanghua/socket-redis",
+    "description": "socket redis连接,用于redis命令,缓存",
+    "type": "yii2-extension",
+    "keywords": ["yii2","redis"],
+    "homepage": "https://github.com/J-guanghua/socketRedis",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "J-guanghua",
+            "email": "hua.163com@qq.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "guanghua\\redis\\": ""
+        }
+    }
+}
