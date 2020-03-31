@@ -5,6 +5,7 @@ namespace guanghua\redis;
 
 class RedisCache extends Cache
 {
+    //redis连接对象
     public $redis;
 
     public function init()
