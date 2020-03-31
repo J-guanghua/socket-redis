@@ -28,36 +28,36 @@ Usage
 一，redis 使用介绍
 
 
-use guanghua\queue\socketRedis\Guanghua;
+use guanghua\queue\guanghua;
 
 // 设置指定 key 的值
-Guanghua::redis()->SET('KEY_NAME', "VALUE");
+guanghua::redis()->SET('KEY_NAME', "VALUE");
 
 // 获取指定 key 的值。
-Guanghua::redis()->GET('KEY_NAME');
+guanghua::redis()->GET('KEY_NAME');
 
 
 // 向有序集合添加一个或多个成员
-Guanghua::redis()->ZADD('myset', 1, "hello");
+guanghua::redis()->ZADD('myset', 1, "hello");
 
-Guanghua::redis()->ZADD('myset', 5, "hello2");
+guanghua::redis()->ZADD('myset', 5, "hello2");
 
 // 返回有序集中，成员的分数值
 
-$value = Guanghua::redis()->ZRANGE('myset',0, -1,'WITHSCORES');
+$value = guanghua::redis()->ZRANGE('myset',0, -1,'WITHSCORES');
 
 更多命令参考redis文档.............
 
 二，redis cache 使用介绍
 
-use guanghua\queue\socketRedis\Guanghua;
+use guanghua\queue\guanghua;
 // 缓存一个对象,或数组 200秒
-Guanghua::cache()->set('obj',new \queue\KeyWordJob(['id'=>['dwdwfefe']]),200);
+guanghua::cache()->set('obj',new \queue\KeyWordJob(['id'=>['dwdwfefe']]),200);
 
-Guanghua::cache()->set('obj',[1,2,3,4,5],200);
+guanghua::cache()->set('obj',[1,2,3,4,5],200);
 
 // 获取缓存值
-Guanghua::cache()->get('obj');
+guanghua::cache()->get('obj');
 
 //从缓存中删除所有值
-Guanghua::cache()->flush();
+guanghua::cache()->flush();
