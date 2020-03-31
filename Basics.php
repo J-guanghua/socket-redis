@@ -1,6 +1,6 @@
 <?php
 
-namespace guanghua\queue\socketRedis;
+namespace guanghua\queue;
 
 
 class Basics
@@ -21,9 +21,7 @@ class Basics
     }
 
     //初始化对象。
-    public function init()
-    {
-    }
+    public function init() {}
 
     //使用初始属性值配置对象。
     public static function configure($object, $properties)
