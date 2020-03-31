@@ -228,16 +228,11 @@ class RedisConn extends Monitor
         'ZSCAN', // 增量迭代排序集元素和相关的分数
     ];
 
-    /**
-     * @var 资源redis套接字连接
-     */
+    //资源redis套接字连接
     private $_socket = false;
 
 
-    /**
-     * 在序列化此组件时关闭连接。
-     * @return array
-     */
+    //在序列化此组件时关闭连接。
     public function __sleep()
     {
         $this->close();
@@ -286,10 +281,7 @@ class RedisConn extends Monitor
         }
     }
 
-    /**
-     * Closes the currently active DB connection.
-     * It does nothing if the connection is already closed.
-     */
+    //关闭当前活动的数据库连接。
     public function close()
     {
         if ($this->_socket !== false) {
