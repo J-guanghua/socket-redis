@@ -15,7 +15,7 @@ class guanghua
 		'database' => 0 //连接数据库
     ];
 
-	//数组共享组件实例的id索引
+    //数组共享组件实例的id索引
     private static $_components = [];
 
     //当前redis实例
