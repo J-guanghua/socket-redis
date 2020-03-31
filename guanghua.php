@@ -32,7 +32,7 @@ class guanghua
 
     //得到一个实例化的类对象 并注册到共享组件
     public static function ensure($id ,$class ,$array = []){
-        
+       
         if (isset(self::$_components[$id])) {
             
 		return self::$_components[$id];
