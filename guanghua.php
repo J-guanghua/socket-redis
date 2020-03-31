@@ -3,7 +3,7 @@
 namespace guanghua\redis;
 
 
-class Guanghua
+class guanghua
 {	
 	const REDIS_NAME = 'redis'; // 共享组件 redis
 	const CACHE_NAME = 'cache'; //共享组件 cache
