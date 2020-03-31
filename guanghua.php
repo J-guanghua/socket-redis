@@ -34,9 +34,9 @@ class guanghua
     public static function ensure($id ,$class ,$array = []){
         
         if (isset(self::$_components[$id])) {
-            return self::$_components[$id];
+            
+		return self::$_components[$id];
         }
-        var_dump(4444);
         return self::$_components[$id] = new $class($array);
     }
 }
