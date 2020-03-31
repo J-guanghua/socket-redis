@@ -13,7 +13,6 @@ class Monitor extends Basics
     public function __clone()
     {
         $this->_events = [];
-        $this->_behaviors = null;
     }
 
 
