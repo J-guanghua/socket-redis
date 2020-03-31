@@ -3,7 +3,7 @@
     "description": "socket redis连接,用于redis命令,缓存",
     "type": "yii2-extension",
     "keywords": ["yii2","redis"],
-    "homepage": "https://github.com/J-guanghua/socketRedis",
+    "homepage": "https://github.com/J-guanghua/socket-redis",
     "license": "BSD-3-Clause",
     "authors": [
         {
