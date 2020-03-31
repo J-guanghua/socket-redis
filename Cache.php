@@ -3,7 +3,8 @@
 namespace guanghua\redis;
 
 
-abstract class Cache extends Monitor{
+abstract class Cache extends Monitor
+{
    
 	//为了确保互操作性，应该只使用字母数字字符
     public $keyPrefix = 'cache';
