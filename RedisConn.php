@@ -2,7 +2,9 @@
 
 namespace guanghua\redis;
 
+use Exception;
 
+//用于操作redis命令
 class RedisConn extends Monitor
 {
 	//事件在数据库连接建立后触发的事件
@@ -410,3 +412,4 @@ class RedisConn extends Monitor
         }
     }
 }
+
