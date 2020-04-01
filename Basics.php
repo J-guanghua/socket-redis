@@ -2,6 +2,7 @@
 
 namespace guanghua\redis;
 
+use Exception;
 
 class Basics
 {
@@ -44,9 +45,9 @@ class Basics
         if (method_exists($this, $getter)) {
             return $this->$getter();
         } elseif (method_exists($this, 'set' . $name)) {
-            throw new \Exception('Getting write-only property: ' . get_class($this) . '::' . $name);
+            throw new Exception('Getting write-only property: ' . get_class($this) . '::' . $name);
         } else {
-            throw new \Exception('Getting unknown property: ' . get_class($this) . '::' . $name);
+            throw new Exception('Getting unknown property: ' . get_class($this) . '::' . $name);
         }
     }
 
@@ -61,9 +62,9 @@ class Basics
         if (method_exists($this, $setter)) {
             $this->$setter($value);
         } elseif (method_exists($this, 'get' . $name)) {
-            throw new \Exception('Setting read-only property: ' . get_class($this) . '::' . $name);
+            throw new Exception('Setting read-only property: ' . get_class($this) . '::' . $name);
         } else {
-            throw new \Exception('Setting unknown property: ' . get_class($this) . '::' . $name);
+            throw new Exception('Setting unknown property: ' . get_class($this) . '::' . $name);
         }
     }
 }
