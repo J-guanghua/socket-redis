@@ -2,7 +2,6 @@
 
 namespace guanghua\redis;
 
-
 class RedisCache extends Cache
 {
     //redis连接对象
