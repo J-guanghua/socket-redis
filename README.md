@@ -6,13 +6,13 @@ Installation
 要么跑
 
 ```
-php composer.phar require --prefer-dist guanghua/socket-redis "*"
+php composer.phar require guanghua/socket-redis "dev-master"
 ```
 
 或添加
 
 ```
-"guanghua/socket-redis": "*"
+"guanghua/socket-redis": "dev-master"
 ```
 
 到你的需求部分 `composer.json` 文件.
