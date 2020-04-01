@@ -1,7 +1,7 @@
 {
     "name": "guanghua/socket-redis",
     "description": "socket redis连接,用于redis命令,缓存",
-    "type": "guanghua-extension",
+    "type": "library",
     "keywords": ["guanghua","redis"],
     "homepage": "https://github.com/J-guanghua/socket-redis",
     "license": "BSD-3-Clause",
