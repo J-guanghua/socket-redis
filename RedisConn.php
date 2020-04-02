@@ -288,7 +288,6 @@ class RedisConn extends Monitor
     {
         if ($this->_socket !== false) {
             $connection = ($this->unixSocket ?: $this->hostname . ':' . $this->port) . ', database=' . $this->database;
-            \Yii::trace('Closing DB connection: ' . $connection, __METHOD__);
             $this->executeCommand('QUIT');
             stream_socket_shutdown($this->_socket, STREAM_SHUT_RDWR);
             $this->_socket = false;
@@ -328,6 +327,7 @@ class RedisConn extends Monitor
         if (in_array($redisCommand, $this->redisCommands)) {
             return $this->executeCommand($redisCommand, $params);
         } else {
+            throw new Exception('Calling unknown method: ' . get_class($this) . "::$name()".implode(' ',$params));
             return parent::__call($name, $params);
         }
     }
