@@ -61,3 +61,9 @@ guanghua::cache()->get('obj');
 
 //从缓存中删除所有值
 guanghua::cache()->flush();
+
+二，redis session 使用介绍
+guanghua::session()->set('name',[1,2,3,4,5]);
+
+// 获取缓存值
+guanghua::session()->get('name');
