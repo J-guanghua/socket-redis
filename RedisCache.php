@@ -5,12 +5,12 @@ namespace guanghua\redis;
 class RedisCache extends Cache
 {
     //redis连接对象
-    public $redis;
+    public $redis = 'redis';
 
     public function init()
     {
         parent::init();
-        $this->redis = guanghua::redis();
+        $this->redis = guanghua::ensure($this->redis,RedisConn::class);
     }
 
     //检查指定的键是否存在于缓存中。
