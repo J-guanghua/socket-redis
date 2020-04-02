@@ -26,7 +26,7 @@ class RedisSession extends Monitor
     public function init()
     {
 
-        $this->redis = guanghua::redis();
+        $this->redis = guanghua::ensure($this->redis,RedisConn::class);
 
         if ($this->keyPrefix === null) {
             $this->keyPrefix = substr(md5($this->id), 0, 5);
