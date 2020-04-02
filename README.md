@@ -25,7 +25,7 @@ Usage
 
 ```php
 
-一，redis 使用介绍
+一，redis 使用操作
 
 
 use guanghua\redis\guanghua;
@@ -48,7 +48,7 @@ $value = guanghua::redis()->ZRANGE('myset',0, -1,'WITHSCORES');
 
 更多命令参考redis文档.............
 
-二，redis cache 使用介绍
+二，redis cache 使用操作
 
 use guanghua\redis\guanghua;
 // 缓存一个对象,或数组 200秒
@@ -62,7 +62,7 @@ guanghua::cache()->get('obj');
 //从缓存中删除所有值
 guanghua::cache()->flush();
 
-二，redis session 使用介绍
+三，redis session 使用操作
 guanghua::session()->set('name',[1,2,3,4,5]);
 
 // 获取缓存值
