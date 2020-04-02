@@ -28,7 +28,7 @@ Usage
 一，redis 使用介绍
 
 
-use guanghua\queue\guanghua;
+use guanghua\redis\guanghua;
 
 // 设置指定 key 的值
 guanghua::redis()->SET('KEY_NAME', "VALUE");
@@ -50,7 +50,7 @@ $value = guanghua::redis()->ZRANGE('myset',0, -1,'WITHSCORES');
 
 二，redis cache 使用介绍
 
-use guanghua\queue\guanghua;
+use guanghua\redis\guanghua;
 // 缓存一个对象,或数组 200秒
 guanghua::cache()->set('obj',new \queue\KeyWordJob(['id'=>['dwdwfefe']]),200);
 
