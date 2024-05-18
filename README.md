@@ -81,7 +81,11 @@ $session = RedisSession([
 ])
 
 //设置 session 值
-$session->set('name',[1,2,3,4,5]);
+$session->set('username',[1,2,3,4,5]);
 
+// 方式2 设置session变量
+$_SESSION['username'] = 'JohnDoe';
+$_SESSION['email'] = 'john@example.com';
+ 
 //获取 session 值
-$session->get('name');
+$session->get('username');
